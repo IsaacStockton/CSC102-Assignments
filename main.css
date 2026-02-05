@@ -1,0 +1,30 @@
+/* This is the style of comments for css
+
+Selector: has 3 options which are HTML tag/element, Custon class, and ID of an element.
+*/
+body{
+    background-color: rgb(77, 77, 77);
+    color: rgb(247, 74, 74);
+}
+/* This is section will only apply to the header element */
+header{
+    text-align: center;
+}
+
+nav{
+    height: 600px;
+    width: 200px;
+    float: left;
+    padding: 5px;
+    line-height: 30px;
+}
+
+footer{
+    text-align: center;
+    margin-right: 200px;
+}
+
+#memeImage{
+    margin-right: 200px;
+    
+}
