@@ -26,7 +26,64 @@
             src="Why.gif">
         </p>
     </div>
+
+    <h2>Play my Dice Game</h2>
+    <!-- No spaces inside of the function name  -->
+    <button onclick="PlayDiceGame();">Play Game</button>
+    <div id="divMessage">Waiting for the game to start...</div>
+    <div id="divRoll1"></div>
+    <div id="divRoll2"></div>
+    <div id="divSum"></div>
+
+    <script src="Scripts.js"> </script>
+
     <h2>The 4 pillars of programming</h2>
+
+    <h3>Variables</h3>
+    <!-- This script can specifyes that you're coding with Javascript -->
+    <script>
+        let firstName = "Isaac";
+
+        // Both var and let are equivalent for the purpose of the class
+        var lastName = "Stockton";
+    </script>
+
+    <h3>Functions</h3>
+
+    <script>
+
+        function addNumbers(){
+            // 2 variables that we can add together
+            let number1 = 5;
+            let number2 = 8;
+            // another variable tto hold the sum
+            let sum = number1 + number2;
+
+            // The sum to the console
+            console.log("the sum is: " + sum)
+        }
+        // This line allows you to test the code inside of console
+        addNumbers();
+    </script>
+
+    <h3>Decisions Logic (if/else)</h3>
+
+    <script>
+        if (firstName == "Isaac" && lastName == "Stockton"){
+            // since the value in firstName is Isaac, It'll run this code
+            console.log("Your first name is Isaac");
+        } 
+
+        else if (firstName == "Isaac2"){
+            console.log("Your first name is Isaac2");
+        }
+
+        else {
+            console.log("Your first name is not Isaac");
+        }
+    </script>
+
+    <h3>Loops</h3>
 
 </body>
 <!-- This is the closing Html tag which should be at the very end of the file -->
