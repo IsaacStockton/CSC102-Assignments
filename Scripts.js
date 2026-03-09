@@ -28,6 +28,7 @@
             document.getElementById("divRoll2").textContent = "Dice roll 2:" + roll2;
             document.getElementById("divSum").textContent = "Sum:" + rollSum;
         }
+// The code for the moving Image
 
         // This function is to generate a random number between what ever 2 numbers
         function getRandomNumber(){
@@ -36,4 +37,45 @@
             number = Math.ceil(number);
 
             return number;
+        }
+
+                // This variable is to track the current interval id
+        let intervalID = 0;
+
+        function StartImageMove(){
+            // This variable is a shortcut for the HTML image elemnet
+            let memeImage = document.getElementById("memeImage");
+            // setInterval allows us to repeatedly run code
+            intervalID = setInterval(function(){
+
+                // this gets a random number for the top and left cords
+                let topCord = getRandomMovement();
+                let leftCord = getRandomMovement();
+
+                memeImage.style.left = leftCord + "px";
+                memeImage.style.top = topCord + "px";
+
+            }, 300);  // 1000 miliseconds = 1 second 
+
+            // This'll enable the stop button 
+            document.getElementById("btnStop").disabled = false;
+
+            // Disable the start button
+            document.getElementById("btnStart").disabled = true;
+        }
+
+        // The purpose of this function is to stop the image from moving
+        function StopImageMove(){
+            clearInterval(intervalID);
+
+             // This'll Disable the stop button 
+            document.getElementById("btnStop").disabled = true;
+
+            // Enable the start button
+            document.getElementById("btnStart").disabled = false;
+        }
+
+        // Function to generate random number for the movement
+        function getRandomMovement(){
+            return Math.floor(Math.random() * 800);
         }

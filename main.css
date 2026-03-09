@@ -25,6 +25,9 @@ footer{
 }
 
 #memeImage{
-    margin-right: 200px;
+    /* Having the position set to absolute makes it to have the image move around the screen */
+    position: absolute;
+    left: 400px;
+    top: 400px;
     
 }
